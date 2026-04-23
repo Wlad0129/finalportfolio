@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Preparamos la página: le decimos el idioma y nos aseguramos de que se vea perfecta en cualquier celular -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pet gallery of Wladimir Arnedo — meet Thor, Hercules, Apolo, and more." />
+  <title>My Pets — Wladimir Arnedo</title>
+
+  <!-- Conectamos la misma hoja de estilos del portafolio principal. Así todo se ve como parte de una misma familia -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<!-- ¡Truco importante! Le ponemos la clase "page-pets" al body. 
+     Gracias a ella, nuestro CSS sabrá que tiene que encender ese fondo estrellado tan especial que diseñamos. -->
+<body class="page-pets">
+
+  <!-- 
+       =================================================
+       ENCABEZADO Y MENÚ DE NAVEGACIÓN
+       Es súper parecido al de la página principal para que 
+       nadie se pierda. Solo que aquí usamos "index.html#" 
+       para devolver al visitante a donde estaba antes.
+       ================================================= 
+  -->
+  <header>
+    <nav>
+      <!-- Un clic al logo te lleva de vuelta a casa (la página inicial) -->
+      <a href="index.html" class="nav-logo">Wladimir<span>.</span>Arnedo</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <!-- Un botón llamativo por si se enamoran de nuestras mascotas y quieren contactarnos -->
+        <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+       =================================================
+       GALERÍA DE NUESTRAS MASCOTAS
+       Aquí hemos preparado unas lindas tarjetas (cards)
+       para presumir y presentar a cada miembro de la familia.
+       ================================================= 
+  -->
+  <main class="pet-gallery">
+    <p class="section-label">My Pets</p>
+    <h1>My favorite <em>companions</em></h1>
+    <p class="gallery-desc">Each one has its own personality. Let me introduce them.</p>
+
+    <!-- Nuestro tablero mágico de fotos. Le dijimos a CSS que organice esto automáticamente según el tamaño de la pantalla -->
+    <div class="gallery-grid">
+
+      <!-- Conozcamos a Thor -->
+      <article class="pet-card">
+        <!-- El "alt" es súper necesario: le cuenta de qué trata la imagen a las personas con discapacidad visual -->
+        <img src="Thor.jpg" alt="Thor, a strong and elegant Cane Corso" />
+        <div class="pet-info">
+          <h2>Thor</h2>
+          <p class="pet-breed">Cane Corso</p>
+          <p>A strong, loyal, and well-trained dog. Thor is the guardian of the house and always alert.</p>
+          <!-- Pequeñas píldoras informativas que resumen cómo es -->
+          <div class="pet-tags">
+            <span class="tag">Strong</span>
+            <span class="tag">Trained</span>
+            <span class="tag">Protective</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Y aquí está Hercules, el consentido -->
+      <article class="pet-card">
+        <img src="labra.jpg" alt="Hercules, a friendly and playful Labrador" />
+        <div class="pet-info">
+          <h2>Hercules</h2>
+          <p class="pet-breed">Labrador</p>
+          <p>Playful and intelligent, Hercules is the best companion for outdoor activities.</p>
+          <div class="pet-tags">
+            <span class="tag">Caring</span>
+            <span class="tag">Tracker</span>
+            <span class="tag">Playful</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Un saludo para el gran Apolo -->
+      <article class="pet-card">
+        <img src="pitbull.jpeg" alt="Apolo, a muscular and affectionate Pitbull American Bully" />
+        <div class="pet-info">
+          <h2>Apolo</h2>
+          <p class="pet-breed">Pitbull American Bully</p>
+          <p>Despite his imposing figure, Apolo is extremely affectionate and loves kids.</p>
+          <div class="pet-tags">
+            <span class="tag">Muscular</span>
+            <span class="tag">Affectionate</span>
+            <span class="tag">Playful</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Asis vigilando desde arriba -->
+      <article class="pet-card">
+        <img src="aguila.jpg" alt="Asis, a majestic and fast Harpy Eagle" />
+        <div class="pet-info">
+          <h2>Asis</h2>
+          <p class="pet-breed">Harpy Eagle</p>
+          <p>The queen of the sky. Asis is a natural hunter with an impressive wingspan.</p>
+          <div class="pet-tags">
+            <span class="tag">Fast</span>
+            <span class="tag">Strong</span>
+            <span class="tag">Hunter</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- La elegancia hecha caballo, Zeus -->
+      <article class="pet-card">
+        <img src="horse.jpeg" alt="Zeus, a spirited and elegant Paso horse" />
+        <div class="pet-info">
+          <h2>Zeus</h2>
+          <p class="pet-breed">Paso Horse</p>
+          <p>Elegant and spirited, Zeus is a superior genetics specimen that draws attention at every show.</p>
+          <div class="pet-tags">
+            <span class="tag">Muscular</span>
+            <span class="tag">Spirited</span>
+            <span class="tag">Grade A</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Y Uwey, que tiene más paciencia que todos nosotros juntos -->
+      <article class="pet-card">
+        <img src="uwey.jpg" alt="Uwey, a long-lived and calm Galapagos tortoise" />
+        <div class="pet-info">
+          <h2>Uwey</h2>
+          <p class="pet-breed">Galapagos Tortoise</p>
+          <p>The wisest of the group. Uwey has spent decades accompanying the family with endless calm.</p>
+          <div class="pet-tags">
+            <span class="tag">Long-lived</span>
+            <span class="tag">Large</span>
+            <span class="tag">Gentle</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Siempre es amable dejarle al visitante una manera clara de regresar al lugar del que vino -->
+    <div class="btn-wrapper">
+      <a href="index.html" class="btn btn-outline">&larr; Back to Portfolio</a>
+    </div>
+  </main>
+
+  <!-- 
+       =================================================
+       PIE DE PÁGINA
+       Una despedida sencilla que hace juego perfecto 
+       con el resto del diseño del sitio web.
+       ================================================= 
+  -->
+  <footer>
+    <span>&copy; 2026 Wladimir Arnedo. Built with HTML, CSS &amp; JavaScript.</span>
+    <div class="footer-links">
+      <a href="index.html">Portfolio</a>
+    </div>
+  </footer>
+
+  <!-- Por último, invitamos a nuestro JavaScript a la fiesta por si necesitamos hacer magia aquí también -->
+  <script src="script.js"></script>
+</body>
+
+</html>

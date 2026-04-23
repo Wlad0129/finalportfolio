@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Aquí configuramos lo básico: idioma, diseño adaptativo para celulares y descripción para que Google nos encuentre -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Wladimir Arnedo — Frontend Developer and UI Engineer." />
+  <title>Wladimir Arnedo — Developer</title>
+
+  <!-- Conectamos nuestra hoja de estilos para darle color y vida a la página -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Este es el mensajito de bienvenida flotante. Nuestro archivo script.js lo hará aparecer poco después de abrir la página -->
+  <div id="welcome-toast" class="welcome-toast" role="status" aria-live="polite"></div>
+
+  <!-- 
+       =================================================
+       ENCABEZADO Y MENÚ DE NAVEGACIÓN
+       Esta es la barra superior fija. 
+       Tiene nuestro logo y los enlaces para movernos.
+       ================================================= 
+  -->
+  <header>
+    <nav>
+      <!-- Al hacer clic en el logo, volvemos mágicamente arriba del todo -->
+      <a href="#home" class="nav-logo">Wladimir<span>.</span>Arnedo</a>
+
+      <!-- Los enlaces para navegar cómodamente por nuestras secciones -->
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <!-- ¡Un atajo para ir a ver a nuestras mascotas! -->
+        <li><a href="mascotas.html">My Pets</a></li>
+        <!-- Este botón lo hacemos resaltar un poco más para animar a que nos contacten -->
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+       =================================================
+       SECCIÓN PRINCIPAL (HERO)
+       Lo primero que ve la gente al entrar.
+       Nos presentamos de forma amigable y ofrecemos formas de contacto.
+       ================================================= 
+  -->
+  <section id="home" class="hero">
+    <!-- Un fondo con una cuadrícula sutil para darle un toque muy pro -->
+    <div class="hero-grid"></div>
+
+    <div class="hero-content">
+      <!-- Un detallito visual: un circulito que parpadea indicando que estamos disponibles para trabajar -->
+      <div class="hero-badge">
+        <span class="dot"></span>Available for freelance work
+      </div>
+
+      <!-- El gran título con nuestro nombre -->
+      <h1>Hi, I'm <em>Wladimir Arnedo</em></h1>
+      <p class="hero-role">Frontend Developer &amp; UI Engineer</p>
+      <p class="hero-desc">
+        I build clean, functional interfaces that bridge design and engineering.
+        Focused on semantic HTML, modern CSS, and JavaScript that actually makes sense.
+      </p>
+
+      <!-- Los botones principales: uno para ver proyectos y otro para enviar mensaje -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work &rarr;</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+
+      <!-- 
+           Fila con iconos de nuestras redes y contactos.
+           Usamos SVGs directamente en vez de librerías grandes para que la página cargue súper rápido.
+      -->
+      <div class="social-row">
+
+        <!-- Enlace directo a nuestro GitHub -->
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="social-btn" id="btn-github"
+          title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+            0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+            -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+            .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+            -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004
+            1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651
+            .64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855
+            0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017
+            C22 6.484 17.522 2 12 2z" />
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <!-- Enlace a nuestro LinkedIn profesional -->
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="social-btn"
+          id="btn-linkedin" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136
+            1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85
+            3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065
+            2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771
+            C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227
+            24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <!-- Enlace a nuestro Twitter / X -->
+        <a href="https://x.com/yourusername" target="_blank" rel="noopener" class="social-btn" id="btn-twitter"
+          title="X / Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99
+            21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084
+            4.126H5.117z" />
+          </svg>
+          <span>Twitter</span>
+        </a>
+
+        <!-- Enlace rápido para que nos envíen un correo electrónico -->
+        <a href="mailto:your@email.com" class="social-btn" id="btn-email" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 7 10 7 10-7" />
+          </svg>
+          <span>Email</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+       =================================================
+       SECCIÓN SOBRE MÍ
+       Aquí contamos un poquito de quiénes somos.
+       ¡Y le pusimos magia con JavaScript para que sea divertido!
+       ================================================= 
+  -->
+  <section id="about" class="about">
+    <p class="section-label">About Me</p>
+    <h2>Code with <em>intention.</em></h2>
+
+    <!-- Le pusimos un ID a este párrafo para poder cambiarle el texto mágicamente al presionar un botón -->
+    <p id="about-bio">
+      I'm a frontend developer passionate about building fast, accessible, and
+      visually refined web experiences. I care about the details — the ones users
+      <strong>feel</strong> even when they can't name them.
+    </p>
+    <p>
+      When I'm not coding, I read about design systems, contribute to open source,
+      or spend time with my pets.
+    </p>
+
+    <!-- ¡Un botón sorpresa! Si haces clic, JavaScript cambiará el texto que acabas de leer por una anécdota -->
+    <button id="btn-fun-fact" class="btn btn-outline" style="margin-top:1rem">
+      Show Fun Fact &#10024;
+    </button>
+
+    <!-- Aquí listamos nuestras herramientas. Agregamos un botón para esconderlas si queremos limpiar la pantalla -->
+    <div class="skills-controls">
+      <p class="section-label" style="margin-bottom:0">Skills</p>
+      <!-- Este botón trabajará mano a mano con JavaScript para hacer desaparecer (o aparecer) la lista de abajo -->
+      <button id="btn-toggle-skills" class="btn btn-outline">Hide Skills</button>
+    </div>
+
+    <!-- Nuestras habilidades. Tienen un ID clave para que el botón sepa exactamente qué ocultar -->
+    <div class="skills-grid" id="skills-grid">
+      <span class="skill-tag">HTML &amp; CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Node.js</span>
+      <span class="skill-tag">Git &amp; GitHub</span>
+      <span class="skill-tag">Responsive Design</span>
+    </div>
+  </section>
+
+  <!-- 
+       =================================================
+       NUESTROS PROYECTOS
+       Un pequeño escaparate de lo que hemos construido.
+       Cada tarjeta de la lista tiene su descripción y enlace.
+       ================================================= 
+  -->
+  <section id="projects" class="projects">
+    <p class="section-label">Projects</p>
+    <h2>Selected <em>work</em></h2>
+
+    <!-- Una lista limpia sin los aburridos puntos negros de siempre -->
+    <ul class="projects-list">
+      <li>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+          🛒 E-Commerce Store
+        </a>
+        <p>Full-stack shopping platform with cart, checkout, and admin panel. React + REST API.</p>
+      </li>
+      <li>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="project-link">
+          📊 Analytics Dashboard
+        </a>
+        <p>Interactive dashboard with charts, filters, and real-time updates. Fully responsive.</p>
+      </li>
+      <li>
+        <!-- Un guiño: este enlace te regresa a la parte alta de la página que estás leyendo ahora -->
+        <a href="#home" class="project-link">
+          🌐 Personal Portfolio
+        </a>
+        <p>This very site — designed and built from scratch with HTML, CSS, and JavaScript.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 
+       =================================================
+       SECCIÓN MASCOTAS
+       Una invitación para que los usuarios vayan a nuestra 
+       sección dedicada de animalitos.
+       ================================================= 
+  -->
+  <section id="pets" class="pets-section">
+    <p class="section-label">My Pets</p>
+    <h2>My favorite <em>companions</em></h2>
+    <p>I have several amazing animals. Meet each one on the dedicated page.</p>
+
+    <!-- Centramos este botón para que llame más la atención -->
+    <div class="btn-wrapper">
+      <button id="btn-pets" class="btn btn-primary">
+        Meet my pets &rarr;
+      </button>
+    </div>
+  </section>
+
+  <!-- 
+       =================================================
+       SECCIÓN DE CONTACTO
+       Acá dividimos la pantalla: información directa a la 
+       izquierda, y un formulario listo para usarse a la derecha.
+       ================================================= 
+  -->
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+
+      <!-- La información directa por si prefieren enviarnos un correo o buscar nuestro GitHub -->
+      <div class="contact-info">
+        <p class="section-label">Contact</p>
+        <h2>Let's build <em>something.</em></h2>
+        <p>Have a project in mind? I'd love to hear about it. Send me a message.</p>
+
+        <!-- Un par de tarjetas para nuestros métodos de contacto -->
+        <div class="contact-items">
+          <a href="mailto:your@email.com" class="contact-item">
+            <span class="ci-icon">&#9993;</span>
+            <div>
+              <span class="ci-label">Email</span>
+              your@email.com
+            </div>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="contact-item">
+            <span class="ci-icon">&#9415;</span>
+            <div>
+              <span class="ci-label">GitHub</span>
+              github.com/yourusername
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- El formulario. Lo genial es que JavaScript se encarga de manejarlo 
+           para que cuando la persona presione Enviar, la página no parpadee ni se recargue -->
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <!-- Evitamos que puedan estirar la caja del mensaje porque rompería nuestro bonito diseño -->
+          <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message &rarr;</button>
+
+        <!-- Este pequeño párrafo es el lugar donde aparecerá mágicamente el mensaje "¡Enviado!" -->
+        <p id="form-status" class="form-status"></p>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- 
+       =================================================
+       PIE DE PÁGINA (FOOTER)
+       La firma de nuestro sitio web con el año y un resumen
+       de los enlaces más importantes.
+       ================================================= 
+  -->
+  <footer>
+    <span>&copy; 2026 Wladimir Arnedo. Built with HTML, CSS &amp; JavaScript.</span>
+    <div class="footer-links">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+      <a href="https://behance.net/yourusername" target="_blank" rel="noopener">Behance</a>
+      <a href="#home">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <!-- Y por último, pero importantísimo: le damos vida a nuestra web cargando las acciones interactivas -->
+  <script src="script.js"></script>
+</body>
+
+</html>
