@@ -54,9 +54,9 @@ Since this is a static website, no complex build tools or servers are required t
 
 Have a project in mind or want to collaborate? I'd love to hear from you!
 
-- **Email**: [your@email.com](mailto:your@email.com)
-- **GitHub**: [@yourusername](https://github.com/yourusername)
-- **LinkedIn**: [Wladimir Arnedo](https://linkedin.com/in/yourusername)
+- **Email**: [tu-correo@ejemplo.com](mailto:tu-correo@ejemplo.com)
+- **GitHub**: [@Wlad0129](https://github.com/Wlad0129)
+- **LinkedIn**: [Wladimir Arnedo](https://linkedin.com/in/wladimir-arnedo)
 
 ---
 
