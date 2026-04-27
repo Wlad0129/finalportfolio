@@ -131,6 +131,9 @@ if (sections.length && navLinks.length) {
     entries.forEach((entry) => {
       // ¿Alguien entró en el área visible?
       if (entry.isIntersecting) {
+        // Agregamos la clase visible para disparar la animación de entrada
+        entry.target.classList.add('visible');
+
         // Entonces revisamos uno por uno los enlaces de nuestro menú superior
         navLinks.forEach((link) => {
           // Nos fijamos si este enlace corresponde a la sección que estamos viendo ahorita
@@ -141,8 +144,42 @@ if (sections.length && navLinks.length) {
         });
       }
     });
-  }, { threshold: 0.4 }); // Le pedimos que nos avise solo cuando la sección se vea al menos un 40%
+  }, { threshold: 0.2 }); // Bajamos un poco el umbral para que la animación empiece antes
 
   // Repartimos un detective para cada sección de la página
   sections.forEach((section) => observer.observe(section));
+}
+
+
+/* ── MÓDULO 7: EL MENÚ HAMBURGUESA ──
+   Controlamos la apertura y cierre del menú en móviles, 
+   asegurándonos de que se sienta fluido y se cierre al elegir una opción.
+   ------------------------------------------------- */
+const hamburger = document.getElementById('hamburger');
+const navLinksContainer = document.getElementById('nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+const menuOverlay = document.getElementById('menu-overlay');
+
+if (hamburger && navLinksContainer && menuOverlay) {
+  const toggleMenu = () => {
+    hamburger.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+
+    // Evitamos que el fondo se mueva cuando el menú está abierto
+    document.body.style.overflow = navLinksContainer.classList.contains('active') ? 'hidden' : '';
+  };
+
+  hamburger.addEventListener('click', toggleMenu);
+  menuOverlay.addEventListener('click', toggleMenu);
+
+  // Cerramos el menú automáticamente cuando el usuario hace clic en un enlace
+  navLinksItems.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinksContainer.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
 }
